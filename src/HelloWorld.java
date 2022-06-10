@@ -1,3 +1,5 @@
+
+
 public class HelloWorld {
     public static void main(String[] args) {
 //TODO: CODE GOES HERE
@@ -13,7 +15,7 @@ public class HelloWorld {
         myString = "a";
         //        myString = 3.14159;
 
-//        long myNumber = ;
+//        long myNumber;
 
         long myNumber = (long) 3.14;
 
@@ -34,6 +36,18 @@ public class HelloWorld {
 
 //        int three = (int) "three";
 
+
+//        int x = 4;
+//        x += 5;
+
+//        int x = 3;
+//        int y = 4;
+//        y *= x;
+
+//        int x = 10;
+//        int y = 2;
+//        x = x / y;
+//        y -= x;
 
 
 
