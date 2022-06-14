@@ -55,6 +55,18 @@ public class MethodsExercises {
 
     }
 
+    public static void dice(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("How many sides does your dice have?");
+        int sides = scanner.nextInt();
+        int die1 = (int) (Math.random() * sides) +1;
+        int die2 = (int) (Math.random() * sides) +1;
+        System.out.println("Rolled a " + die1);
+        System.out.println("Rolled a " + die2);
+    }
+
+
+
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -66,7 +78,8 @@ public class MethodsExercises {
 //        chooseNumber();
 
 
-        factorials();
+//        factorials();
+        dice();
 
 
 
