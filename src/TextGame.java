@@ -5,10 +5,18 @@ public class TextGame {
 
     public static String gameStart() {
         Scanner scanner = new Scanner(System.in);
+        String character = null;
         System.out.println("Would you like to start the game? [Y/N]");
         String startGame = scanner.nextLine();
-        return startGame;
+        if (startGame.equalsIgnoreCase("y")) {
+            System.out.println("Enter character name: ");
+            character = scanner.nextLine();
 
+        } else if (startGame.equalsIgnoreCase("n")) {
+            System.out.println("Cya!");
+            character = gameStart();
+        }
+        return character;
     }
 
     public static String starterArea(String character) {
@@ -24,26 +32,31 @@ public class TextGame {
             System.out.println("\"" + character + "\"" + " has arrived to the Dread Lands!");
             startArea = "dread";
         }
-
         return startArea;
-    }
-
-    public static String playerChar() {
-        Scanner scanner = new Scanner(System.in);
-        String character = null;
-        if (gameStart().equalsIgnoreCase("y")) {
-            System.out.println("Enter character name: ");
-            character = scanner.nextLine();
-        }
-        return character;
     }
 
     public static int gamePlay() {
         int charHealth = 100;
-        if (starterArea(playerChar()).equalsIgnoreCase("town")) {
-            charHealth -= 50;
+        int randomizer = (int) (Math.random() * 3) + 1;
+        String startArea = starterArea(gameStart());
+        if (startArea.equalsIgnoreCase("town")) {
+            if (randomizer == 1) {
+                System.out.println("one");
+            } else if (randomizer == 2) {
+                System.out.println("two");
+            } else if (randomizer == 3) {
+                System.out.println("three");
+            }
+        } else if (startArea.equalsIgnoreCase("dread")) {
+            if (randomizer == 1) {
+                System.out.println("one");
+            } else if (randomizer == 2) {
+                System.out.println("two");
+            } else if (randomizer == 3) {
+                System.out.println("three");
+            }
         }
-        System.out.println(charHealth);
+//        System.out.println("Health: " + charHealth + "%");
         return charHealth;
     }
 
