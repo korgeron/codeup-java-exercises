@@ -21,7 +21,7 @@ public class TextGame {
 
     public static String starterArea(String character) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Welcome " + "\"" + character + "\"" + " to the World of Endvasil! \n... \nEnter the number of where you would like to start!");
+        System.out.println("Welcome " + "\"" + character + "\"" + " to the World of Endrasil! \n... \nEnter the number of where you would like to start!");
         System.out.println("1) Town of New Hope \n2) Dread Lands");
         int startingAt = scanner.nextInt();
         String startArea = null;
@@ -75,6 +75,7 @@ public class TextGame {
 
                             }
                             if (charHealth <= 0){
+                                charHealth = 0;
                                 break;
                             }
                         }
@@ -102,6 +103,7 @@ public class TextGame {
 
                             }
                             if (charHealth <= 0){
+                                charHealth = 0;
                                 break;
                             }
                         }
@@ -131,6 +133,7 @@ public class TextGame {
 
                         }
                         if (charHealth <= 0){
+                            charHealth = 0;
                             break;
                         }
                     }
@@ -146,11 +149,11 @@ public class TextGame {
             }
         } else if (startArea.equalsIgnoreCase("dread")) {
             if (randomizer == 1) {
-                System.out.println("one");
+                System.out.println("Purchase DLC");
             } else if (randomizer == 2) {
-                System.out.println("two");
+                System.out.println("Purchase DLC");
             } else if (randomizer == 3) {
-                System.out.println("three");
+                System.out.println("Purchase DLC");
             }
         }
 
