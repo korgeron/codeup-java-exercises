@@ -67,7 +67,7 @@ public class Input {
     public static void main(String[] args) {
         Input input = new Input();
 //        System.out.println(input.getString());
-//        System.out.println(input.yesNo());
+        System.out.println(input.yesNo());
 //        input.getInt(1,10);
 //        input.getDouble(0,1);
     }

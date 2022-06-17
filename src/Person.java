@@ -1,6 +1,10 @@
 public class Person {
     private String name;
 
+    public Person(String name) {
+        this.name = name;
+    }
+
     public String getName(){
         return this.name;
     }
@@ -15,7 +19,7 @@ public class Person {
 
 
 public static void main(String[]args){
-Person jack = new Person();
+Person jack = new Person("Bob");
 jack.setName("Jack");
     System.out.println(jack.getName());
     System.out.println(jack.sayHello());
