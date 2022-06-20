@@ -6,6 +6,11 @@ public class Rectangle {
     protected int area;
     protected int perimeter;
 
+    public Rectangle(int length, int width) {
+        this.length = length;
+        this.width = width;
+    }
+
     public int getLength() {
         return length;
     }

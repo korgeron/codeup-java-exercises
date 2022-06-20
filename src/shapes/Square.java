@@ -3,12 +3,14 @@ package shapes;
 public class Square extends Rectangle{
     private int side;
 
-    public int Side(int num){
-        return side = setWidth(num) + setLength(num);
+    public Square(int side){
+        super(side, side);
+        this.side = side;
     }
+
     @Override
     public int getArea(){
-        return area = side ^ 2;
+        return area = side * side;
     }
 
     @Override
