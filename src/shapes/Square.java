@@ -1,24 +1,27 @@
 package shapes;
 
 public class Square extends Rectangle{
-    private int side;
+    protected int side;
 
+
+//TODO: This "SUPER" is a constructor that references its extended Classes Constructor
     public Square(int side){
         super(side, side);
         this.side = side;
     }
 
+
     @Override
-    public int getArea(){
-        return area = side * side;
-    }
+    public int getArea() {
+        System.out.println("This is from the squares area!");
+        return side * side;
+    } // Math.pow(side,2);
 
     @Override
     public int getPerimeter(){
-        return perimeter = 4 * side;
+        System.out.println("This is from the squares perimeter!");
+        return 4 * side;
     }
 
-    public static void main(String[] args) {
 
-    }
 }
