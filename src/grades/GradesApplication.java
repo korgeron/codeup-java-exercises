@@ -1,7 +1,9 @@
 package grades;
 
 import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
+
 
 public class GradesApplication {
     public static void main(String[] args) {
@@ -37,8 +39,13 @@ public class GradesApplication {
         //todo: add user interaction to see students grades based on github handle
         Scanner scanner = new Scanner(System.in);
         boolean keepGoing = true;
-        while (keepGoing){
+        //THESE NULL VARIABLES ARE FOR STORING DATA FROM A LOOP
+        String student = null;
+        String username = null;
+        Double gradeAvg = null;
+
             System.out.println("Welcome!");
+        while (keepGoing){
             System.out.println("Here are the GitHub usernames of our students:");
             System.out.println("---------------------------------------------------");
             students.keySet().forEach((k) -> {
@@ -46,20 +53,35 @@ public class GradesApplication {
             });
             System.out.println("\n---------------------------------------------------");
             System.out.println("\nWhat student would you like to see more information on?");
+            String answer1 = scanner.nextLine();
+            for (Map.Entry<String, Student> entry : students.entrySet()) {
+                String k = entry.getKey();
+                Student v = entry.getValue();
+                if (answer1.contains(k)){
+                    student = v.getName();
+                    username = k;
+                    gradeAvg = v.getGradeAverage();
+                }
+            }
 
-
+            if (student == null){
+                System.err.printf("Sorry, no student found with the GitHub username of \"%s\".%n", answer1);
+            } else {
+                System.err.printf("Name: %s - Github Username: %s %nCurrent Average: %.2f%n", student, username, gradeAvg);
+            }
 
             System.out.println("Would you like to see another student? [Y/N]");
-            String answer = scanner.nextLine();
-            if (answer.equalsIgnoreCase("n")){
+            String answer2 = scanner.nextLine();
+            if (answer2.equalsIgnoreCase("n")){
                 System.out.println("Goodbye, and have a wonderful day!");
                 keepGoing = false;
             }
-            if (answer.equalsIgnoreCase("y")){
+            if (answer2.equalsIgnoreCase("y")){
                 System.out.println("GREAT!");
+                student = null;
+                username = null;
+                gradeAvg = null;
             }
         }
-
-
     }
 }
