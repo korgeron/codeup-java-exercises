@@ -65,9 +65,9 @@ public class GradesApplication {
             }
 
             if (student == null){
-                System.err.printf("Sorry, no student found with the GitHub username of \"%s\".%n", answer1);
+                System.err.printf("Sorry, no student found with the GitHub username of \"%s\".%n %n", answer1);
             } else {
-                System.err.printf("Name: %s - Github Username: %s %nCurrent Average: %.2f%n", student, username, gradeAvg);
+                System.out.printf("Name: %s - Github Username: %s %nCurrent Average: %.2f%n %n", student, username, gradeAvg);
             }
 
             System.out.println("Would you like to see another student? [Y/N]");
