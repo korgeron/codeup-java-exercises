@@ -1,3 +1,5 @@
+import grades.Student;
+
 import java.util.HashMap;
 
 public class test {
@@ -15,6 +17,16 @@ public class test {
             System.out.println(k);
             System.out.println(v);
         });
+
+
+
+        Person joe = new Person("Joe");
+        System.out.println(joe.getName());
+
+        Person jay = new Person("Jay");
+        System.out.println(jay.getName());
+
+
 
     }
 }

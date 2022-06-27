@@ -3,7 +3,7 @@ package grades;
 import java.util.ArrayList;
 import java.util.concurrent.atomic.AtomicReference;
 
-public class Student {
+public class Student{
     private String name;
     private ArrayList<Double> grades;
 
@@ -22,6 +22,7 @@ public class Student {
     }
 
     public String getName() {
+        System.out.println("This is from student");
         return this.name;
 
     }

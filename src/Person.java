@@ -1,4 +1,6 @@
-public class Person {
+import grades.Student;
+
+public class Person{
     private String name;
 
     public Person(String name) {
@@ -6,6 +8,7 @@ public class Person {
     }
 
     public String getName(){
+        System.out.println("This is from person ");
         return this.name;
     }
 
